@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #101828;
+    --font-type: "Montserrat", sans-serif;
+    --neutral-color: #ffffff;
+}
+
+body {
+    font-family: var(--font-type);
+    font-size: larger;
+}
+
+body > header {
+    background-image: url(/assets/imgs/img-14.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    color: var(--neutral-color);
+    padding: 60px;
+    padding-bottom: 550px;
+    background-position: 20% 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+header h2 {
+    font-size: 21px;
+    font-weight: normal;
+}
+
+header > nav {
+    display: flex;
+    justify-content: left;
+}
+
+header button {
+    background-color: transparent;
+    color: var(--neutral-color);
+    padding: 10px;
+    border-radius: 25px;
+    border: groove;
+    width: 150px;
+}
+
+nav li, nav > button {
+    display: none;
+}
