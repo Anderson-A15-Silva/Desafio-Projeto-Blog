@@ -198,8 +198,8 @@ nav li, nav > button {
 
 #ourTeam > div:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas por linha */
-    gap: 20px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
     justify-items: center;
 }
 
@@ -214,4 +214,81 @@ nav li, nav > button {
     padding: 20px;
     width: 100%;
     margin-top: 60px;
+}
+
+aside > section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
+aside form { 
+    background-color: var(--neutral-color);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: medium;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+aside form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+aside form > * {
+    margin: 0px 5px 10px 5px;
+}
+
+aside form input {
+    padding: 10px;
+    border-radius: 10px;
+    border: gray solid 1px;
+}
+
+aside form > button {
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    padding: 20px;
+}
+
+footer input {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer div > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer form > button {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+footer > div:first-child {
+    margin-bottom: 100px;
+}
+
+footer > div:nth-of-type(2) > div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    padding: 20px;
 }

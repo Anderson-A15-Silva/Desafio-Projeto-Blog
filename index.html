@@ -189,15 +189,6 @@
                 <h2> Get in touch </h2>
             </div>
 
-            <form>
-                <input type="text" name="n_firstNameFormField" id="firstNameFormField" placeholder="First name" required>
-                <input type="text" name="n_lastNameFormField" id="lastNameFormField" placeholder="Last name" required>
-                <input type="email" name="n_emailFormField" id="emailFormField" placeholder="you@company.com" required>
-                <textarea name="n_messageFormField" id="messageFormField" required></textarea>
-                <input type="radio" name="n_radioFormPrivacyPolicy" id="radioFormPrivacyPolicy" required>
-                <button type="submit">Send message</button>
-            </form>
-
             <section>
                 <div>
                     <!-- Icon -->
@@ -224,6 +215,35 @@
                     <p>+234 901234 384</p>
                 </div>
             </section>
+
+            <form>
+                <div>
+                    <label for="firstNameFormField">
+                        First name
+                        <input type="text" name="n_firstNameFormField" id="firstNameFormField" placeholder="First name" required>
+                    </label>
+                    <label for="lastNameFormField">
+                        Last name
+                        <input type="text" name="n_lastNameFormField" id="lastNameFormField" placeholder="Last name" required>
+                    </label>
+                </div>
+                <label for="emailFormField"">
+                    Email
+                    <input type="email" name="n_emailFormField" id="emailFormField" placeholder="you@company.com" required>
+                </label>
+                <label for="messageFormField">
+                    Message
+                    <textarea name="n_messageFormField" id="messageFormField" required></textarea>
+                </label>
+                
+                
+                
+                <label for="radioFormPrivacyPolicy">
+                    <input type="radio" name="n_radioFormPrivacyPolicy" id="radioFormPrivacyPolicy" required> You agree to our friendly privacy policy
+                </label>
+                
+                <button type="submit">Send message</button>
+            </form>
         </aside>
     </main>
     <footer>
