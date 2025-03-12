@@ -10,7 +10,6 @@ body {
     font-weight: normal;
     margin: 0;
     padding: 0;
-    width: 100vw; 
     box-sizing: border-box;
     height: 100%;
 }
@@ -20,8 +19,7 @@ body > header {
     background-repeat: no-repeat;
     width: 100%;
     color: var(--neutral-color);
-    padding: 60px;
-    padding-bottom: 550px;
+    padding: 0px 40px 550px 40px;
     background-position: 20% 10%;
     display: flex;
     flex-direction: column;
@@ -37,11 +35,6 @@ header h2 {
     font-weight: normal;
 }
 
-header > nav {
-    display: flex;
-    justify-content: left;
-}
-
 header button {
     background-color: transparent;
     color: var(--neutral-color);
@@ -53,10 +46,70 @@ header button {
 
 nav li, nav > button {
     display: none;
+    list-style: none;
 }
 
-#shop, #aboutUs, #blog, #services, #ourTeam {
-    margin: 0 30px;
+nav > div:first-child {
+    display: flex;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+}
+
+
+nav > img {
+    margin-right: 0;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#shop, #aboutUs, #blog, #services, #ourTeam, #contact {
+    padding: 40px;
     width: 100%;
 }
 
@@ -73,6 +126,7 @@ nav li, nav > button {
 
 #aboutUs p, #blog p{
     font-size: 18px;
+    color: gray;
 }
 
 #feature {
@@ -91,7 +145,7 @@ nav li, nav > button {
 }
 
 #shop picture > img{
-    width: 460px;
+    width: 400px;
     margin-bottom: 20px;
 }
 
@@ -195,7 +249,6 @@ nav li, nav > button {
     width: 10px;
 }
 
-
 #ourTeam > div:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -207,11 +260,9 @@ nav li, nav > button {
     height: 400px;
 }
 
-
 #contact {
     background-color: var(--primary-color);
     color: var(--neutral-color);
-    padding: 20px;
     width: 100%;
     margin-top: 60px;
 }
@@ -253,6 +304,19 @@ aside form input {
     border: gray solid 1px;
 }
 
+aside form label{
+    display: flex;
+    flex-direction: column;
+}
+
+aside form label:nth-child(4){
+    display: inline;
+}
+
+aside form div input {
+    width: 140px;
+}
+
 aside form > button {
     background-color: var(--primary-color);
     color: var(--neutral-color);
@@ -263,7 +327,8 @@ aside form > button {
 footer {
     background-color: var(--primary-color);
     color: var(--neutral-color);
-    padding: 20px;
+    padding: 40px;
+    width: 100%;
 }
 
 footer input {
