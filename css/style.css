@@ -25,6 +25,13 @@ body > header {
     flex-direction: column;
 }
 
+header > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+}
+
 header h1 {
     font-size: 30px;
     font-weight: normal;
@@ -62,41 +69,34 @@ nav {
     width: 100%;
 }
 
-.logo-container {
+#logo-container {
     display: flex;
     align-items: center;
 }
 
-.logo-container img {
+#logo-container img {
     width: 30px;
     margin-right: 10px;
 }
 
-.navbar {
+#navbar {
     display: flex;
-    align-items: center;
-}
-
-.navbar img {
-    width: 30px;
-    margin-right: 10px;
-}
-
-.hamburger-icon {
-    display: flex;
+    align-items: end;
     flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 18px;
-    cursor: pointer;
+    margin-top: 60px;
+    width: 150px;
 }
 
-.bar {
-    width: 100%;
-    height: 4px;
-    background-color: white;
+#navbar img {
+    width: 30px;
+    margin-right: 10px;
 }
 
+#dropdown-menu {
+    padding: 10px;
+    color: white;
+    display: inline-block;
+}
 
 nav > img {
     margin-right: 0;
@@ -231,9 +231,21 @@ main {
     border-bottom: gray solid 1px;
 }
 
-#ourTeam div > div img {
+#ourTeam div > div img {   
     width: 200px;
     height: 300px;
+}
+
+#ourTeam div {
+    margin-bottom: 30px;
+}
+
+#ourTeam p {
+    font-size: 15px;
+}
+
+#ourTeam p:nth-child(3n) {
+    color: gray;
 }
 
 #ourTeam picture {
@@ -241,12 +253,26 @@ main {
     flex-direction: row;
 }
 
+#ourTeam picture {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
 #ourTeam picture > div {
     display: inline;
 }
 
+#ourTeam div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #ourTeam div > picture img {
-    width: 10px;
+    height: 20px;
+    width: 20px;
+    margin: 10px;
 }
 
 #ourTeam > div:nth-child(2) {
@@ -356,4 +382,36 @@ footer > div:nth-of-type(2) > div:nth-of-type(2) {
     grid-template-columns: 1fr 1fr; 
     gap: 20px; 
     padding: 20px;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    body > header {
+        background-size: 125%;
+        background-position: left top;
+        padding:
+    }
+
+    header > div {
+       width: 700px;
+       padding: 0px 0px 50px 10px;
+       align-items: start;
+    }
+
+    header h1 {
+        font-size: 60px;
+        font-weight: normal;
+    }
+    
+    header h2 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    header button {
+        padding: 15px;
+    }
 }
