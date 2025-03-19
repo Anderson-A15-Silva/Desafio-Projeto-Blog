@@ -67,6 +67,20 @@ nav {
     padding: 10px;
     color: white;
     width: 100%;
+    margin-top: 60px;
+}
+
+nav li {
+    font-size: 14px;
+    display: block !important;
+    margin-bottom: 5px;
+    background-color: #101828;
+    padding: 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
 }
 
 #logo-container {
@@ -81,9 +95,8 @@ nav {
 
 #navbar {
     display: flex;
-    align-items: end;
+    align-items: center;
     flex-direction: column;
-    margin-top: 60px;
     width: 150px;
 }
 
@@ -92,10 +105,20 @@ nav {
     margin-right: 10px;
 }
 
-#dropdown-menu {
+#navbar button {
+    background-color: transparent;
+    border: none;
+}
+
+
+#hamburger-menu {
+    width: 130px;
     padding: 10px;
     color: white;
-    display: inline-block;
+    display: none;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav > img {
@@ -113,8 +136,13 @@ main {
     width: 100%;
 }
 
-#shop label {
+#shop div:first-child {
     display: flex;
+    justify-content: space-between;
+}
+
+#shop label {
+    display: none;
     border-bottom: gray solid 1px;
 }
 
@@ -131,10 +159,29 @@ main {
 
 #feature {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#feature div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+#feature img {
+    width: 30px;
+}
+
+.botao-selecionado {
+    padding: 5px;
+    color: white;
+    background-color: #101828 !important;
+    border-radius: 4px;
 }
 
 #feature div:last-child {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -178,42 +225,82 @@ main {
     background-size: cover;
 }
 
+#services-grid p:nth-child(2){
+    display: none;
+}
+
 #services-img1 {
+    background-position: center;
     background-image: url(/assets/imgs/img-7.png);
     height: 200px;
+    display: flex;
+}
+
+#services-img1 p, #services-img2 p,
+#services-img3 p, #services-img4 p,
+#services-img5 p {
+    color: white;
+    display: block;
+}
+
+#services-img1 > div, #services-img2 > div,
+#services-img3 > div, #services-img4 > div,
+#services-img5 > div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#services-img1:hover p:nth-child(2), #services-img2:hover p:nth-child(2),
+#services-img3:hover p:nth-child(2), #services-img4:hover p:nth-child(2),
+#services-img5:hover p:nth-child(2) {
+    display: block;
+    font-size: 12px;
+    margin: 24px;
 }
 
 #services-img2 {
+    background-position: center;
     background-image: url(/assets/imgs/img-6.png);
     height: 200px;
 }
 
 #services-img3 {
+    background-position: center;
     background-image: url(/assets/imgs/img-4.png);
     height: 200px;
 }
 
 #services-img4 {
+    background-position: center;
     background-image: url(/assets/imgs/img-5.png);
     height: 200px;
 }
 
 #services-img5 {
+    background-position: center;
     background-image: url(/assets/imgs/img-19.png);
     height: 200px;
-    background-position: bottom center;
     object-fit: cover;
 }
 
-#aboutUs div:nth-child(1){
+#aboutUs > div:nth-child(1){
     display: flex;
     margin: 60px 0px 30px 0px;
     border-bottom: gray solid 1px;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #aboutUs p {
     margin: 16px 10px;
+}
+
+#aboutUs-header img {
+    width: 24px;
 }
 
 #blog #blog-header {
@@ -224,6 +311,10 @@ main {
 
 #blog p {
     margin: 16px 10px;
+}
+
+#blog div:nth-child(2) img {
+    display: none;
 }
 
 #ourTeam #ourTeam-header {
@@ -294,10 +385,17 @@ main {
     margin-top: 60px;
 }
 
+#contact section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 15px;
+}
+
 aside > section {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
     gap: 20px;
     padding: 20px;
     height: 100%;
@@ -311,7 +409,7 @@ aside form {
     justify-content: space-between;
     padding: 30px;
     font-size: medium;
-    margin: 10px;
+    margin: 30px 10px;
     border-radius: 10px;
 }
 
@@ -431,29 +529,90 @@ button:hover, a:hover {
     header button {
         padding: 15px;
     }
-    
 
-    #shop label > input {
-        width: 200px;
-        background-color: rgb(168, 168, 168);
-        color: rgb(168, 168, 168);
-        border: 1px solid rgb(168, 168, 168);
-        border-radius: 5px;
+    nav {
+        justify-content: initial;
+    }
+
+    #navbar img {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: flex !important;
+        flex-direction: row !important;
+        margin-left: 400px;
+    }
+
+    #hamburger-menu li {
+        background-color: transparent !important;
+        padding: 5px !important;
+    }
+
+    nav li, nav > button {
+        display: flex;
+        list-style: none;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+    }
+    
+    #button-hamburger {
+        display: none;
+    }
+
+    #shop div:first-child {
+        justify-content: start;
+    }
+    
+    #shop > div:first-child > img {
+        display: none;
     }
 
     #shop label {
-        border: none;
+        width: 200px;
+        background-color: #F4F4F4;
+        color: rgb(168, 168, 168);
+        border: 1px solid rgb(168, 168, 168);
+        border-radius: 50px;
     }
 
-    #shop label > img {
-        display: none;
+    #shop label {
+        padding: 5px;
+        display: flex !important;
+        width: 300px;
+        align-items: center;
+    }
+
+    #shop div:first-child img {
+        width: 24px;
     }
 
     #feature > div:first-child {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-between;
     }
+
+    #feature {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #feature label {
+        margin-top: 25px;
+    }
+
+    #feature input {
+        border: none;
+        background-color: #F4F4F4 !important;
+        width: 300px;
+        outline: none;
+    }
+
 
     /* header, main, footer {
         width: 100%;
@@ -563,18 +722,114 @@ button:hover, a:hover {
 
     aside {
         padding-right: 94px !important;
+        width: 93% !important;
     }
 
     aside form div input {
-        width: 520px !important;
+        width: 180px !important;
     }
 
     footer {
-        width: 90% !important;
-        padding-right: 94px !important;
+        width: 94% !important;
     }
 
     header > * {
         margin-left: 50px;
+    }
+
+    #aboutUs div > div:first-child {
+        padding: 10px;
+        margin-right: 50px;
+    }
+
+    #blog div > div:first-child {
+        padding: 20px;
+        margin-right: 50px;
+    }
+
+    #aboutUs-header {
+        flex-direction: row !important;
+    }
+
+    #aboutUs-header > img {
+        width: 24px !important;
+    }
+
+    #contact > div:nth-child(2) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #contact form {
+        width: 40% !important;
+        height: 400px;
+        margin-left: 40px;
+        margin-right: 60px;
+    }
+
+    #blog div:nth-child(2) img {
+        display: block;
+    }
+
+    #contact > * {
+        padding-bottom: 10px !important;
+        margin-left: 40px;
+    }
+
+    #contact section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #ourTeam div:nth-child(2) {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #contact {
+        padding: 0;
+        padding-bottom: 100px;
+    }
+
+    form textarea {
+        height: 140px;
+    }
+
+    footer > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer > div:nth-child(1) > * {
+        height: 50px;
+    }
+
+    footer > div:nth-child(1) > div:first-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > div:nth-child(1) > form {
+        flex-direction: row !important;
+    }
+
+    footer > div:nth-child(2) {
+        display: flex;
+        font-size: 18px;
+    }
+
+    footer > div:nth-child(2) > div:nth-child(2) {
+        width: 60%;
+        display: flex;
+        justify-content: space-between !important;
+    }
+
+    footer > div:last-child {
+        margin-top: 50px;
+    }
+
+    #navbar {
+        margin-top: 0px;
     }
 }

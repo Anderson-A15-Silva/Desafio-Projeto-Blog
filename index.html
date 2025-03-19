@@ -14,14 +14,17 @@
                 <p>Paws n' Play</p>
             </div>
             <div id="navbar">
-                <img src="assets/icons/menu-icon.svg">
+                <button id="button-hamburger">
+                    <img src="assets/icons/menu-icon.svg">
+                </button>
+                
 
-                <ul id="dropdown-menu">
-                    <li><a href="shop" target="_self">Shop</a></li>
-                    <li><a href="services" target="_self">Services</a></li>
-                    <li><a href="aboutUs" target="_self">About Us</a></li>
-                    <li><a href="blog" target="_self">Blog</a></li>
-                    <li><a href="contact" target="_self">Contact</a></li>
+                <ul id="hamburger-menu">
+                    <li><a href="#shop" target="_self">Shop</a></li>
+                    <li><a href="#services" target="_self">Services</a></li>
+                    <li><a href="#aboutUs" target="_self">About Us</a></li>
+                    <li><a href="#blog" target="_self">Blog</a></li>
+                    <li><a href="#contact" target="_self">Contact</a></li>
                 </ul>
             </div>
             <!-- <ul>
@@ -42,30 +45,37 @@
     </header>
     <main>
         <section id="shop">
-            <div id="feature">
+            <div>
                 <div>
-                    <label>
-                        <img src="/assets/icons/paws-icon.svg" alt="icone de patas de animais">
-                        <input type="text" placeholder="Shop">
-                        <img src="/assets/icons/loupe-icon.svg" alt="icone de lupa">
-                    </label>
-
-                    <h3>Featured Products</h3>
+                    <img src="/assets/icons/paws-icon.svg" alt="icone de patas de animais">
+                    <h2>Shop</h2>
                 </div>
                 
+                <img src="/assets/icons/loupe-icon.svg" alt="icone de lupa">
+            </div>
+
+            <div id="feature">
                 <div>
-                    <button>Random</button>
-                    <button>Cat</button>
-                    <button>Dogs</button>
-                    <button>Fish</button>
-                    <button>Birds</button>
+                    <h3>Featured Products</h3>
+
+                    <label for="featureInput">
+                        <img src="/assets/icons/loupe-icon.svg" alt="icone de lupa">
+                        <input type="text" placeholder="Search" id="featureInput">
+                    </label>
                 </div>
-
-                <picture>
-                    <img src="assets/imgs/img-17.png" alt="">
-                    <img src="assets/imgs/img-16.png" alt="">
-                </picture>
-
+                <div>
+                    <div id="shop-button">
+                        <button class="botao-selecionado">Random</button>
+                        <button>Cat</button>
+                        <button>Dogs</button>
+                        <button>Fish</button>
+                        <button>Birds</button>
+                    </div>
+                    <picture id="shop-field">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </picture>
+                </div>
             </div>
         </section>
 
@@ -77,11 +87,21 @@
             
             <div>
                 <picture id="services-grid">
-                    <div id="services-img1"><img src="/assets/imgs/img-7.png" alt=""></div>
-                    <div id="services-img2"><img src="/assets/imgs/img-6.png" alt=""></div>
-                    <div id="services-img3"><img src="/assets/imgs/img-4.png" alt=""></div>
-                    <div id="services-img4"><img src="/assets/imgs/img-5.png" alt=""></div>
-                    <div id="services-img5"><img src="/assets/imgs/img-19.png" alt=""></div>
+                    <div id="services-img1">
+                        <div><p>Grooming</p><p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam. Dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam.</p></div>
+                    </div>
+                    <div id="services-img2">
+                        <div><p>Boarding</p><p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam. Dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam.</p></div>
+                    </div>
+                    <div id="services-img3">
+                        <div><p>Veterinary</p><p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam. Dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam.</p></div>
+                    </div>
+                    <div id="services-img4">
+                        <div><p>Training</p><p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam. Dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam.</p></div>
+                    </div>
+                    <div id="services-img5">
+                        <div><p>Adoption</p><p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam. Dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam. Donec pellentesque ut eget tempor egestas diam.</p></div>
+                    </div>
                 </picture>
             </div>
         </section>
@@ -208,59 +228,61 @@
                 <h2> Get in touch </h2>
             </div>
 
-            <section>
-                <div>
-                    <!-- Icon -->
-                    <p>Email</p>
-                    <p>Our friendly team is here to help.</p>
-                    <p>hello@pawsnplay.com</p>
-                </div>
-                <div>
-                    <!-- Icon -->
-                    <p>Live chat</p>
-                    <p>Our friendly team is here to help.</p>
-                    <p>Start new chat</p>
-                </div>
-                <div>
-                    <!-- Icon -->
-                    <p>Office</p>
-                    <p>Come say hello at our office HQ.</p>
-                    <p>123, Yaya Abatan sr, Ogba Lagos.</p>
-                </div>
-                <div>
-                    <!-- Icon -->
-                    <p>Phone</p>
-                    <p>Mon-Fri from 8am to 5pm.</p>
-                    <p>+234 901234 384</p>
-                </div>
-            </section>
-
-            <form>
-                <div>
-                    <label for="firstNameFormField">
-                        First name
-                        <input type="text" name="n_firstNameFormField" id="firstNameFormField" placeholder="First name" required>
+            <div>
+                <section>
+                    <div>
+                        <!-- Icon -->
+                        <p>Email</p>
+                        <p>Our friendly team is here to help.</p>
+                        <p>hello@pawsnplay.com</p>
+                    </div>
+                    <div>
+                        <!-- Icon -->
+                        <p>Live chat</p>
+                        <p>Our friendly team is here to help.</p>
+                        <p>Start new chat</p>
+                    </div>
+                    <div>
+                        <!-- Icon -->
+                        <p>Office</p>
+                        <p>Come say hello at our office HQ.</p>
+                        <p>123, Yaya Abatan sr, Ogba Lagos.</p>
+                    </div>
+                    <div>
+                        <!-- Icon -->
+                        <p>Phone</p>
+                        <p>Mon-Fri from 8am to 5pm.</p>
+                        <p>+234 901234 384</p>
+                    </div>
+                </section>
+    
+                <form>
+                    <div>
+                        <label for="firstNameFormField">
+                            First name
+                            <input type="text" name="n_firstNameFormField" id="firstNameFormField" placeholder="First name" required>
+                        </label>
+                        <label for="lastNameFormField">
+                            Last name
+                            <input type="text" name="n_lastNameFormField" id="lastNameFormField" placeholder="Last name" required>
+                        </label>
+                    </div>
+                    <label for="emailFormField"">
+                        Email
+                        <input type="email" name="n_emailFormField" id="emailFormField" placeholder="you@company.com" required>
                     </label>
-                    <label for="lastNameFormField">
-                        Last name
-                        <input type="text" name="n_lastNameFormField" id="lastNameFormField" placeholder="Last name" required>
+                    <label for="messageFormField">
+                        Message
+                        <textarea name="n_messageFormField" id="messageFormField" required></textarea>
                     </label>
-                </div>
-                <label for="emailFormField"">
-                    Email
-                    <input type="email" name="n_emailFormField" id="emailFormField" placeholder="you@company.com" required>
-                </label>
-                <label for="messageFormField">
-                    Message
-                    <textarea name="n_messageFormField" id="messageFormField" required></textarea>
-                </label>
-
-                <label for="radioFormPrivacyPolicy">
-                    <input type="radio" name="n_radioFormPrivacyPolicy" id="radioFormPrivacyPolicy" required> You agree to our friendly privacy policy
-                </label>
-                
-                <button type="submit">Send message</button>
-            </form>
+    
+                    <label for="radioFormPrivacyPolicy">
+                        <input type="radio" name="n_radioFormPrivacyPolicy" id="radioFormPrivacyPolicy" required> You agree to our friendly privacy policy
+                    </label>
+                    
+                    <button type="submit">Send message</button>
+                </form>
+            </div>
         </aside>
     </main>
     <footer>
@@ -328,6 +350,6 @@
             <!-- Six Social Media Icons -->
         </div>
     </footer>
-    <script type="text/typescript" src="index.ts"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
