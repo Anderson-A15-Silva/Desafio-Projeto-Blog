@@ -196,6 +196,71 @@ main {
     margin-bottom: 20px;
 }
 
+#shop-field {
+    display: flex;
+    flex-direction: column;
+}
+
+#shop-field > div {
+    width: 400px;
+    background-image: url('../assets/imgs/img-16.png');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    margin: 15px;
+}
+
+#shop-field > div:hover > div {
+    background-color: rgba(0, 0, 0, 0.438);
+    width: 100%;
+    height: 100%;
+}
+
+#first-item *, #second-item * {
+    display: none;
+}
+
+#first-item:hover *, #second-item:hover * {
+    display: flex;
+}
+
+.item-top {
+    display: flex;
+    justify-content: space-between !important;
+    width: 100%;
+}
+
+.item-top p, .item-top img, .item-mid h4 {
+    width: 120px;
+    margin: 10px;
+    color: white;
+}
+
+.item-mid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item-mid p {
+    margin: 10px;
+    color: white;
+}
+
+.item-mid h4 {
+    margin-top: 100px;
+}
+
+.item-bottom div {
+    display: flex;
+    align-items: center;
+    background-color: #101828;
+    width: 30%;
+    border-radius: 40px;
+    margin-left: 20px;
+}
+
 #services #service-header {
     display: flex; 
     margin: 30px 0px 30px 0px;
@@ -589,6 +654,10 @@ button:hover, a:hover {
 
     #shop div:first-child img {
         width: 24px;
+    }
+
+    #shop-field {
+        flex-direction: row !important;
     }
 
     #feature > div:first-child {
